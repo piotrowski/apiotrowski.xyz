@@ -1,0 +1,43 @@
+baseURL: https://apiotrowski.xyz
+title: apiotrowski.xyz
+theme: PaperMod
+languageCode: en-us
+paginate: 10
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: monokai
+
+params:
+  homeInfoParams:
+    Title: Hi there!
+    Content: >
+      Welcome to my personal space! Here you'll find insights, tutorials, and thoughts on tech.
+
+  socialIcons:
+    - name: github
+      url: https://github.com/piotrowski
+    - name: linkedin
+      url: https://www.linkedin.com/in/aleksander-piotrowski-266a8519b/
+
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: false
+  ShowToc: true
+
+menu:
+  main:
+    - name: About
+      url: /about/
+      weight: 10
+    - name: Posts
+      url: /posts/
+      weight: 20
+    - name: Categories
+      url: /categories/
+      weight: 30

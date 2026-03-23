@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go on apiotrowski.xyz</title>
+    <link>http://localhost:1313/categories/go/</link>
+    <description>Recent content in Go on apiotrowski.xyz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PGX Error: Cannot scan unknown type</title>
+      <link>http://localhost:1313/posts/postgres-with-pqx/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/postgres-with-pqx/</guid>
+      <description>&lt;p&gt;You probably end up here because you saw this error returned from &lt;code&gt;jackc/pgx&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cannot scan unknown type (OID 16458) in text format into *[]recipe.CategoryType
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This error is connected with custom database types, so if this is what you did, this article is for you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Echo middlewares</title>
+      <link>http://localhost:1313/posts/echo-middleware/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/echo-middleware/</guid>
+      <description>&lt;p&gt;In this brief article, I aim to highlight an ideal use-case for middleware, shedding light on its functionality and practical implementation.&lt;/p&gt;
+&lt;p&gt;Middleware serves as a crucial intermediary between user requests and application logic. In the following example, I&amp;rsquo;ll demonstrate how middleware can authenticate users and seamlessly pass custom context to a micro-service, streamlining the authentication process without burdening the service with additional authentication logic.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golden File Testing in Go</title>
+      <link>http://localhost:1313/posts/goldtest/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/goldtest/</guid>
+      <description>&lt;p&gt;In traditional unit testing, specifying expected outputs directly within the test function is common. However, when dealing with complex data structures, such as a large tree, this approach can become unwieldy. Enter golden file testing.&lt;/p&gt;
+&lt;p&gt;Golden file testing alleviates the burden of manually specifying expected outputs by storing them in separate files. Each test case has its own file containing the expected output, typically stored in a designated directory (commonly named &amp;ldquo;testdata&amp;rdquo; and placed adjacent to the test file).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

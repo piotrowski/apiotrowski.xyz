@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Golang &#43; Vim | apiotrowski.xyz</title>
+<meta name="keywords" content="">
+<meta name="description" content="Is Golang &#43; Vim worth trying? Definitely, developing an application with this combination is a cool experience. However I tried using it on a bigger project (I was doing bugfix on docker-cli) and that wasn&rsquo;t a pleasing experience, I felt a bit lost and tired of all of these shortcuts and jumping between files, I think it my be a better experience after I get more experience with Vim. Below I am showing how to setup Vim for Go programming. It&rsquo;s my first attempt so it may be still lacking some features :D">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/golang-setup/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/golang-setup/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script data-goatcounter="https://apiotrowski312.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="apiotrowski.xyz (Alt + H)">apiotrowski.xyz</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Golang &#43; Vim
+    </h1>
+    <div class="post-meta"><span title='2020-11-23 00:00:00 +0000 UTC'>November 23, 2020</span>&nbsp;·&nbsp;<span>3 min</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#plugins" aria-label="Plugins">Plugins</a><ul>
+                        
+                <li>
+                    <a href="#nerdtree" aria-label="NERDTree">NERDTree</a></li>
+                <li>
+                    <a href="#faithvim-go" aria-label="faith/vim-go">faith/vim-go</a></li></ul>
+                </li>
+                <li>
+                    <a href="#summary" aria-label="Summary">Summary</a></li>
+                <li>
+                    <a href="#further-reading" aria-label="Further reading">Further reading</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Is Golang + Vim worth trying? Definitely, developing an application with this combination is a cool experience. However I tried using it on a bigger project (I was doing bugfix on docker-cli) and that wasn&rsquo;t a pleasing experience, I felt a bit lost and tired of all of these shortcuts and jumping between files, I think it my be a better experience after I get more experience with Vim. Below I am showing how to setup Vim for Go programming. It&rsquo;s my first attempt so it may be still lacking some features :D</p>
+<h2 id="plugins">Plugins<a hidden class="anchor" aria-hidden="true" href="#plugins">#</a></h2>
+<p>I have used two plugins to get everything I needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Plug <span style="color:#e6db74">&#39;preservim/nerdtree&#39;</span>
+</span></span><span style="display:flex;"><span>Plug <span style="color:#e6db74">&#39;fatih/vim-go&#39;</span>, <span style="color:#f92672">{</span> <span style="color:#e6db74">&#39;do&#39;</span>: <span style="color:#e6db74">&#39;:GoUpdateBinaries&#39;</span> <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="nerdtree">NERDTree<a hidden class="anchor" aria-hidden="true" href="#nerdtree">#</a></h3>
+<p>NERDTree is a cool tool for every developer, as it allows you to create/move/delete files and directories from inside Vim and most importantly it allows you to browse files just like in any other editor. Whole experience was pretty good, I think some stuff is a bit unnatural for somebody who is coming from IDE word, buy you can get used to it. Also there is a lot of stuff that I was able to do which is not possible in VSCode e.g. split screen in both directions at once.</p>
+<blockquote>
+<p>If you want to split screen with multiple files, use <code>s</code> to split vertically and <code>i</code> to split horizontally.</p>
+</blockquote>
+<p>Below you can see my simple configuration for it, as I wanted to make it more approachable:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e6db74">&#34;NERDtree
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">map &lt;C-b&gt; :NERDTreeToggle&lt;CR&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">autocmd StdinReadPre * let s:std_in=1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">autocmd VimEnter * if argc() == 0 &amp;&amp; !exists(&#34;</span>s:std_in<span style="color:#e6db74">&#34;) | NERDTree | endif
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">autocmd bufenter * if (winnr(&#34;$&#34;) == 1 &amp;&amp; exists(&#34;</span>b:NERDTree<span style="color:#e6db74">&#34;) &amp;&amp; b:NERDTree.isTabTree()) | q | endif
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">set autochdir
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let NERDTreeShowHidden=1
+</span></span></span></code></pre></div><p>With those I was able to use NERDTree as I like. E.g. with <code>Ctrl+b</code> I can open the tree file view.</p>
+<blockquote>
+<p><code>set autchdir</code> was really important for me as i usually open vim like this: <code>vim ~/path/to/file</code> and NERDTree wouldn&rsquo;t catch up and root of NERDTree was still in my current location which was annoying.</p>
+</blockquote>
+<h3 id="faithvim-go">faith/vim-go<a hidden class="anchor" aria-hidden="true" href="#faithvim-go">#</a></h3>
+<p>This one is really powerful, I was able to do everything that I was used to after using VSCode golang extension. I think it worked even better than VSCode E.g I always had some issues with importing my own packages, however here that was not a problem. Maybe it was something else, as it uses the same golang tools as VSCode but I thought it is good to mention.</p>
+<p>Configuration I used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#e6db74">&#34;vim-go
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let g:go_fmt_command = &#34;</span>goimports<span style="color:#e6db74">&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">let g:go_auto_type_info = 1
+</span></span></span></code></pre></div><blockquote>
+<p>By default fmt tool uses a different command to format an output so I changed it, as goimports formats code too and does some additional stuff. If you want to read more, check out links at the end of article.</p>
+</blockquote>
+<h2 id="summary">Summary<a hidden class="anchor" aria-hidden="true" href="#summary">#</a></h2>
+<p>With those two plugins my developer experience was quite good, but as I wrote at start, only for smaller applications. I feel like I have to get used to Vim a bit more before jumping further with it.</p>
+<h2 id="further-reading">Further reading<a hidden class="anchor" aria-hidden="true" href="#further-reading">#</a></h2>
+<ul>
+<li>Vim for blogging. This setup is great for anybody who like to write blog posts in markdown. I am a big fun of this setup. Read more <a href="/posts/setup-for-bloggers/">HERE</a></li>
+<li>Good tutorial with basic NerdTree functionality - <a href="https://medium.com/usevim/nerd-tree-guide-bb22c803dcd2">medium</a></li>
+<li>NERDTree github, best source of NERDTree knowledge - <a href="https://github.com/preservim/nerdtree">link</a></li>
+<li>Why I changed to goimports - <a href="https://github.com/fatih/vim-go/issues/207">link to github issue</a></li>
+</ul>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/goldtest/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Golden File Testing in Go</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/setup-for-bloggers/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Vim setup for bloggers</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">apiotrowski.xyz</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

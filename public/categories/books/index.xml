@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Books on apiotrowski.xyz</title>
+    <link>http://localhost:1313/categories/books/</link>
+    <description>Recent content in Books on apiotrowski.xyz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/books/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win</title>
+      <link>http://localhost:1313/posts/the-phoenix-project/</link>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-phoenix-project/</guid>
+      <description>&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;the-phoenix-project.jpg&#34;
+         alt=&#34;Book authors: Gene Kim, Kevin Behr, George Spafford&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Book authors: Gene Kim, Kevin Behr, George Spafford&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Very intresting concept for an IT book, I have never read technical book that is written like an nover.&lt;/p&gt;
+&lt;p&gt;Main theme for this book is a road from old style waterfall style product development to DevOps mentality. It was even more intrifuing for me as in my current company we are undergoing simillar procedure, starting from better place than &lt;em&gt;Parts Unlimited&lt;/em&gt;, but still, I see a lot of similarities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Big Things Get Done: The Surprising Factors That Determine the Fate of Every Project</title>
+      <link>http://localhost:1313/posts/how-big-things-get-done/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-big-things-get-done/</guid>
+      <description>&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;how-big-things-get-done.jpg&#34;
+         alt=&#34;Book author: Bent Flyvbjerg, Dan Gardner&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Book author: Bent Flyvbjerg, Dan Gardner&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This book holds immense value for every developer - while it&amp;rsquo;s not centered around IT, it provides a comprehensive understanding of how projects unfold and, importantly, the reasons they may not succeed. The elements it discusses can be easily adapted to the IT realm, suggesting it may serve as a valuable read, not only for managers and product individuals, but everyone at large.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

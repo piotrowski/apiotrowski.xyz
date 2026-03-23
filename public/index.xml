@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>apiotrowski.xyz</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on apiotrowski.xyz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PGX Error: Cannot scan unknown type</title>
+      <link>http://localhost:1313/posts/postgres-with-pqx/</link>
+      <pubDate>Sat, 11 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/postgres-with-pqx/</guid>
+      <description>&lt;p&gt;You probably end up here because you saw this error returned from &lt;code&gt;jackc/pgx&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cannot scan unknown type (OID 16458) in text format into *[]recipe.CategoryType
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This error is connected with custom database types, so if this is what you did, this article is for you.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win</title>
+      <link>http://localhost:1313/posts/the-phoenix-project/</link>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-phoenix-project/</guid>
+      <description>&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;the-phoenix-project.jpg&#34;
+         alt=&#34;Book authors: Gene Kim, Kevin Behr, George Spafford&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Book authors: Gene Kim, Kevin Behr, George Spafford&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Very intresting concept for an IT book, I have never read technical book that is written like an nover.&lt;/p&gt;
+&lt;p&gt;Main theme for this book is a road from old style waterfall style product development to DevOps mentality. It was even more intrifuing for me as in my current company we are undergoing simillar procedure, starting from better place than &lt;em&gt;Parts Unlimited&lt;/em&gt;, but still, I see a lot of similarities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Big Things Get Done: The Surprising Factors That Determine the Fate of Every Project</title>
+      <link>http://localhost:1313/posts/how-big-things-get-done/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-big-things-get-done/</guid>
+      <description>&lt;figure&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;how-big-things-get-done.jpg&#34;
+         alt=&#34;Book author: Bent Flyvbjerg, Dan Gardner&#34; width=&#34;300&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;Book author: Bent Flyvbjerg, Dan Gardner&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This book holds immense value for every developer - while it&amp;rsquo;s not centered around IT, it provides a comprehensive understanding of how projects unfold and, importantly, the reasons they may not succeed. The elements it discusses can be easily adapted to the IT realm, suggesting it may serve as a valuable read, not only for managers and product individuals, but everyone at large.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Echo middlewares</title>
+      <link>http://localhost:1313/posts/echo-middleware/</link>
+      <pubDate>Fri, 26 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/echo-middleware/</guid>
+      <description>&lt;p&gt;In this brief article, I aim to highlight an ideal use-case for middleware, shedding light on its functionality and practical implementation.&lt;/p&gt;
+&lt;p&gt;Middleware serves as a crucial intermediary between user requests and application logic. In the following example, I&amp;rsquo;ll demonstrate how middleware can authenticate users and seamlessly pass custom context to a micro-service, streamlining the authentication process without burdening the service with additional authentication logic.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Unleashing the Power of PostgreSQL: Processing JSON Data Like a Pro!</title>
+      <link>http://localhost:1313/posts/postgresql-json-data-processing/</link>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/postgresql-json-data-processing/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;PostgreSQL JSON logo&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/postgresql-json-data-processing/logo.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Learn how to load, process, and insert data into a PostgreSQL database using JSON data.&lt;/p&gt;
+&lt;p&gt;In this article, I&amp;rsquo;ll walk you through preparing and processing JSON data with PostgreSQL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Excalidraw - The Best Open-Source Tool for Drawing Charts</title>
+      <link>http://localhost:1313/posts/excalidraw/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/excalidraw/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Excalidraw logo&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/excalidraw/logo.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In my journey of working on personal projects, I stumbled upon Excalidraw, an open-source tool for creating diagrams and schemes. It has proven to be an invaluable asset, aiding me in understanding the core problems I aim to solve and devising effective solutions. Documenting my thought process alongside visual representations not only solidifies my understanding but also ensures persistence of my ideas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golden File Testing in Go</title>
+      <link>http://localhost:1313/posts/goldtest/</link>
+      <pubDate>Thu, 17 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/goldtest/</guid>
+      <description>&lt;p&gt;In traditional unit testing, specifying expected outputs directly within the test function is common. However, when dealing with complex data structures, such as a large tree, this approach can become unwieldy. Enter golden file testing.&lt;/p&gt;
+&lt;p&gt;Golden file testing alleviates the burden of manually specifying expected outputs by storing them in separate files. Each test case has its own file containing the expected output, typically stored in a designated directory (commonly named &amp;ldquo;testdata&amp;rdquo; and placed adjacent to the test file).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Golang &#43; Vim</title>
+      <link>http://localhost:1313/posts/golang-setup/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/golang-setup/</guid>
+      <description>&lt;p&gt;Is Golang + Vim worth trying? Definitely, developing an application with this combination is a cool experience. However I tried using it on a bigger project (I was doing bugfix on docker-cli) and that wasn&amp;rsquo;t a pleasing experience, I felt a bit lost and tired of all of these shortcuts and jumping between files, I think it my be a better experience after I get more experience with Vim. Below I am showing how to setup Vim for Go programming. It&amp;rsquo;s my first attempt so it may be still lacking some features :D&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim setup for bloggers</title>
+      <link>http://localhost:1313/posts/setup-for-bloggers/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setup-for-bloggers/</guid>
+      <description>&lt;p&gt;In this article, I&amp;rsquo;ll share some valuable tips to harness the power of Vim as a versatile tool for blog writing. From migrating to Neovim to incorporating spellchecking and useful shortcuts, these tips will streamline your writing process and boost productivity.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;about-me&#34;&gt;About me&lt;/h1&gt;
+&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m Aleksander, a passionate software developer from Poland with over seven years of experience in the IT industry. My professional journey began in 2017 while I was in my second year of Bachelor&amp;rsquo;s studies. Since then, I&amp;rsquo;ve worked in various roles including Frontend Developer, System Engineer, and Backend Programmer. This experience has equipped me with a well-rounded understanding of the software development landscape.&lt;/p&gt;
+&lt;h2 id=&#34;professional-journey&#34;&gt;Professional Journey&lt;/h2&gt;
+&lt;p&gt;In recent years, I&amp;rsquo;ve focused on backend development, specializing in technologies like Golang, Microservices, and databases such as PostgreSQL and MongoDB. Additionally, I&amp;rsquo;ve gained experience in infrastructure management using tools like Terraform, and cloud platforms like AWS and GCP.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win | apiotrowski.xyz</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+     
+            Book authors: Gene Kim, Kevin Behr, George Spafford
+        
+
+
+Very intresting concept for an IT book, I have never read technical book that is written like an nover.
+Main theme for this book is a road from old style waterfall style product development to DevOps mentality. It was even more intrifuing for me as in my current company we are undergoing simillar procedure, starting from better place than Parts Unlimited, but still, I see a lot of similarities.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/the-phoenix-project/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/the-phoenix-project/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script><script data-goatcounter="https://apiotrowski312.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="apiotrowski.xyz (Alt + H)">apiotrowski.xyz</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win
+    </h1>
+    <div class="post-meta"><span title='2024-04-02 00:00:00 +0000 UTC'>April 2, 2024</span>&nbsp;·&nbsp;<span>4 min</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#my-key-takeaways" aria-label="My key takeaways">My key takeaways</a><ul>
+                        
+                <li>
+                    <a href="#lack-of-visibility" aria-label="Lack of visibility">Lack of visibility</a></li>
+                <li>
+                    <a href="#making-shortcuts-for-a-short-term-gain-will-make-you-slower-in-a-long-run" aria-label="Making shortcuts for a short term gain will make you slower in a long run">Making shortcuts for a short term gain will make you slower in a long run</a></li>
+                <li>
+                    <a href="#how-to-actually-do-it-correctly" aria-label="How to actually do it correctly?">How to actually do it correctly?</a></li></ul>
+                </li>
+                <li>
+                    <a href="#next-read" aria-label="Next read">Next read</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><figure>
+    <img loading="lazy" src="the-phoenix-project.jpg"
+         alt="Book authors: Gene Kim, Kevin Behr, George Spafford" width="300"/> <figcaption>
+            <p>Book authors: Gene Kim, Kevin Behr, George Spafford</p>
+        </figcaption>
+</figure>
+
+<p>Very intresting concept for an IT book, I have never read technical book that is written like an nover.</p>
+<p>Main theme for this book is a road from old style waterfall style product development to DevOps mentality. It was even more intrifuing for me as in my current company we are undergoing simillar procedure, starting from better place than <em>Parts Unlimited</em>, but still, I see a lot of similarities.</p>
+<h2 id="my-key-takeaways">My key takeaways<a hidden class="anchor" aria-hidden="true" href="#my-key-takeaways">#</a></h2>
+<h3 id="lack-of-visibility">Lack of visibility<a hidden class="anchor" aria-hidden="true" href="#lack-of-visibility">#</a></h3>
+<blockquote>
+<p>I ask slowly, &ldquo;So, you&rsquo;re saying that we have no idea what the list of our commitments is? Really?&rdquo;
+Wes says defensivly, &ldquo;Until now, no one ever asked. We&rsquo;ve always hired smart people and tasked them with certain areas of responsibility. We&rsquo;ve never had to manage things beyong that.&rdquo;</p>
+</blockquote>
+<p>This quote is from first part of the story, when our main character just got promoted to VP of IT. At first, he was just trying to figure out what is even happening in his department and as you can deduce, it is not that easy. They were not using any ticket system, they had no proces or tools that would help them organize. What&rsquo;s worse, something was breaking all the time, people were called for fire fighting every day which was consuming so much time they none of it to spend of actually improving infrastructure and code.</p>
+<p>In the past I though that using tools like Jira or Linear where I need to fill in 10 (or worse, 100) different text boxes to create a ticket for fixing thing I could do in 5 minutes was waste of time. But now, after I spend some time in a industry I see great value in this. It might be waste of time for you, but it might be helpful for other people, everybody can clearly see what you are working on, maybe what you are doing right now will break a flow of other team and create incident on production?</p>
+<h3 id="making-shortcuts-for-a-short-term-gain-will-make-you-slower-in-a-long-run">Making shortcuts for a short term gain will make you slower in a long run<a hidden class="anchor" aria-hidden="true" href="#making-shortcuts-for-a-short-term-gain-will-make-you-slower-in-a-long-run">#</a></h3>
+<blockquote>
+<p>What&rsquo;s happening with Phoenix is a combination of the need to deliver needed features to market, forcing us (devs and ops) to take shortcuts, which are causing ever-worsening deployments.</p>
+</blockquote>
+<p>We are after first deployment of Phoenix Projects. It was complete fiasco, all systems were down for few days, stores couldn&rsquo;t use registers for few days. Engineers had to spent all weekend and more trying to fix this mess. We are learning how Project Phoeninx was born and how it was worked on till now. A lot of issues with delivering code, not working environments, everybody doing random stuff for random projects, Brent (exquisite engineer) being pinged by everybody all time to fix smaller issues here and there.
+I see how this chaos and procedures could make delievering anything very complicated. Working there must have been very hard and frustrating for everybody. Lack of testing environments, lack of tickets, lack of eveyrthing.</p>
+<p>I was working with different projects and I noticed one pattern the more maintained code, with well written unit tests, the less issues were found on production, the less time it take to develop new features. I love when product people are talking about being &ldquo;scrapy&rdquo; and that what you are working on right now is just for a test to see customers will like it, just to maintain this piece of quickly written code, after it grew for another 100k lines, two years later.
+PS: I am using docker and docker-compose for very long time now and I cannot even imagine how work without copy of production environemnt on your machine could look like :D</p>
+<h3 id="how-to-actually-do-it-correctly">How to actually do it correctly?<a hidden class="anchor" aria-hidden="true" href="#how-to-actually-do-it-correctly">#</a></h3>
+<blockquote>
+<p>Sadly I do not have any quote for this part.</p>
+</blockquote>
+<p>This part was the least enternating for me, as this is not first book about DevOps approach I read. I bet nowadays eveyrbody heard about DevOps and how it function.</p>
+<p>In a third part of a book. We are following new project called Unicorn, where we see all good practices are getting implemented. There is close Developer and Operations cooperation. They have testing environments. They are deploying every day. They test code often.</p>
+<figure>
+  <img src="the-phoenix-project-devops-chart.jpg" alt="DevOps chart">
+  <figcaption>Stolen from: <a href="https://clarusway.com/what-is-devops-all-questions-answered/">clarusway.com</a></figcaption>
+</figure>
+<p>It was pointed out that one of biggest advantages over waterfall model is repetition, doing releases every day makes team know the procedure by heart, every day they have a possibility to try again and improve what was not quite right yet. Intrestingly enough exact same point was done by book <em>&ldquo;How big things gets done&rdquo;</em> about which I also wrote an article, check it out <a href="/posts/how-big-things-get-done/">HERE</a>.</p>
+<h2 id="next-read">Next read<a hidden class="anchor" aria-hidden="true" href="#next-read">#</a></h2>
+<p>Authors also wrote another book called &ldquo;The Unicorn Project&rdquo; which also got very nice reviews, however, sadly, I didn&rsquo;t yet managed to read it</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/postgres-with-pqx/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>PGX Error: Cannot scan unknown type</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/how-big-things-get-done/">
+    <span class="title">Next »</span>
+    <br>
+    <span>How Big Things Get Done: The Surprising Factors That Determine the Fate of Every Project</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:1313/">apiotrowski.xyz</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vim on apiotrowski.xyz</title>
+    <link>http://localhost:1313/categories/vim/</link>
+    <description>Recent content in Vim on apiotrowski.xyz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Golang &#43; Vim</title>
+      <link>http://localhost:1313/posts/golang-setup/</link>
+      <pubDate>Mon, 23 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/golang-setup/</guid>
+      <description>&lt;p&gt;Is Golang + Vim worth trying? Definitely, developing an application with this combination is a cool experience. However I tried using it on a bigger project (I was doing bugfix on docker-cli) and that wasn&amp;rsquo;t a pleasing experience, I felt a bit lost and tired of all of these shortcuts and jumping between files, I think it my be a better experience after I get more experience with Vim. Below I am showing how to setup Vim for Go programming. It&amp;rsquo;s my first attempt so it may be still lacking some features :D&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim setup for bloggers</title>
+      <link>http://localhost:1313/posts/setup-for-bloggers/</link>
+      <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/setup-for-bloggers/</guid>
+      <description>&lt;p&gt;In this article, I&amp;rsquo;ll share some valuable tips to harness the power of Vim as a versatile tool for blog writing. From migrating to Neovim to incorporating spellchecking and useful shortcuts, these tips will streamline your writing process and boost productivity.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

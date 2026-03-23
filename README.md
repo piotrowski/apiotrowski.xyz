@@ -2,13 +2,18 @@
 
 ## Development
 
-Install tool and theme:
+Install Hugo and clone the theme submodule:
 
+```bash
+git submodule update --init --recursive
 ```
-pip install mkdocs mkdocs-material
+
+Run local dev server:
+
+```bash
+hugo server
 ```
 
 ### Deploy
 
-Auto deploy to netlify. 
-
+Auto deploy to netlify.
